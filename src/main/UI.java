@@ -36,7 +36,7 @@ public class UI extends JFrame implements ActionListener{
 		Object source = event.getSource();
 		//Do some magic
 		if(source == open_cmd_stream_button) {
-			System.out.println("Started Command Line Streamer mode.");
+			new CMDS();
 		}
 	}
 }
