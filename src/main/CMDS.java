@@ -1,6 +1,6 @@
 package main;
 
-//UI Imports
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,6 +8,7 @@ import javax.swing.*;
 public class CMDS extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 5108747172617593498L;
+	JLabel print_label = new JLabel("Text to Print:");
 	JPanel panel = new JPanel();
 	JTextField input_print_text = new JTextField(20);
 	String print_text;
@@ -15,12 +16,13 @@ public class CMDS extends JFrame implements ActionListener{
 	
 	CMDS() {
 		  super("Super Streamer: Command Line");
-		  setBounds(100,100,400,100);
+		  setBounds(100,200,400,100);
 		  Container con = this.getContentPane();
 		  
 		  print_text_button.addActionListener(this);
 		  
 		  con.add(panel);
+		  panel.add(print_label);
 		  panel.add(input_print_text);
 		  panel.add(print_text_button);
 		  
